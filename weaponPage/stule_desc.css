@@ -1,0 +1,1442 @@
+@charset "UTF-8";
+:root {
+    --back: #002a3a;
+    --dark-back: #001d28;
+    --border-black: #000405;
+    --row: #2E2F2E;
+    --lightBack: #00435e;
+    /*--Text: #006E9A;*/
+    --Text: #e2f6fe;
+    --blue: #00AAEF;
+    --whited: #e2f6fe;
+    --disabled_back: #00121a;
+
+    scroll-behavior: smooth;
+}
+*::-webkit-scrollbar{
+    background-color: var(--border-black);
+    width: 1vh;
+}
+*::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+    border-radius: 100px;
+}
+.invisible{
+    visibility: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+@font-face {
+	font-family: 'b3d'; 
+	src: url("../assets/b3d.ttf"); 
+}
+ input:hover{
+     
+    cursor: pointer;
+ }
+ select:hover{
+     
+    cursor: pointer;
+ }
+a{
+    text-decoration: none;
+}
+.logoText:hover{
+    cursor: pointer;
+}
+.allContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+
+
+    width: 100%;
+    height: 7vh;
+
+    background-color: var(--back);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    z-index: 2;
+}
+.footer{
+    width: 100%;
+    height: 7vh;
+
+    background-color: var(--back);
+    border-top: 0.5vh solid var(--border-black);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.all {
+    position: absolute;
+    top: 7vh;
+    min-height: 93vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: var(--border-black);
+    z-index: 1;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.all2 {
+    position: absolute;
+    top: 7vh;
+    min-height: 93vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    background-color: var(--border-black);
+    z-index: 1;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+
+.footerButtom{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin: 3vh;
+}
+.TimeButton{
+    text-decoration: none;
+    background-color: var(--border-black);
+    color: var(--whited);
+    height: 5vh;
+    min-width: 80%;
+    border-radius: 10px;
+    border: none;
+    
+    font-family: monospace;
+    font-size: 2.4vh;
+}
+
+.TimeButton:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.logoZone {
+    height: 100%;
+    max-width: 35%;
+
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+
+
+}
+
+.logo {
+    height: 90%;
+}
+
+.imageLogo {
+    height: 100%;
+}
+
+.logoText {
+    color: var(--Text);
+    font-size: 5vh;
+    font-family: 'b3d';
+
+    letter-spacing: 1.8px;
+    margin-left: 1vw;
+
+    white-space: nowrap;
+}
+
+
+.headSearch{
+    width: 30%;
+    height: 100%;
+    margin-right: 2vw;
+
+    display: flex;
+    
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.search_in_head{
+    width: 50%;
+    max-width: 50%;
+    height: 5vh;
+    border:none;
+    outline: none !important;
+    appearance: none;
+    padding: 0px 5px 0px 5px;
+    border-bottom-left-radius: 11px;
+    border-top-left-radius: 11px;
+}
+.selectArrow{
+    background-color: var(--whited);
+    border: none;
+    height: 2vh;
+    padding: 1.5vh;
+    border-bottom-right-radius: 11px;
+    border-top-right-radius: 11px;
+}
+.selectButtonFooter{
+    
+    width: 24vh;
+    height: 5vh;
+    border:none;
+    outline: none !important;
+    appearance: none;
+    margin: 0vh 3vh 0vh 3vh;
+    border-radius: 11px;
+    background-color: var(--grayText);
+    color: black;
+}
+
+.SkinSelect{
+    width: 24vh;
+    padding-left: 2vh;
+    height: 5vh;
+    border: none;
+    outline: none !important;
+    margin: 0vh 3vh 0vh 3vh;
+    border-radius: 11px;
+    background-color: var(--grayText);
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+.TopPanelSetting{
+    position: fixed;
+    z-index: 13;
+    height: 91vh;
+    border-top: 1vh solid var(--border-black);
+    border-bottom: 1vh solid var(--border-black);
+    width: 0vw;
+    background-color: var(--back);
+    top: 7%;
+    right: 0%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5%;
+
+
+    animation: view 1s forwards;
+    transition: 0.3s all linear;
+}
+
+@keyframes view {
+  0% {
+    width: 0vw;
+    opacity: 0%;
+    box-shadow: 0px 0px 0vw 1vh #001d28df;
+  }
+  100% {
+    width: 23vw;
+    opacity: 100%;
+    box-shadow: 0px 0px 6vw 2vh #001d28df;
+}
+}
+.TopPanelSetting:hover{
+    box-shadow: 0px 0px 3vw 1vh orange;
+}
+.SettingPan_MAIN{
+    width: 80%;
+}
+.SettingPan_MAIN_DISABLED{
+    width: 80%;
+    padding: 0% 5%;
+    background-color: var(--disabled_back);
+}
+.SettingDiv{
+    width: 80%;
+}
+.SettingPan_MAIN_Button{
+    min-height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 2mm;
+    transition: 0.3s all linear;
+    background-color: var(--whited);
+    width: 100%;
+    color: var(--border-black);
+    font-family: 'b3d';
+    font-size: 3vh;
+
+}
+.SettingPan_MAIN_Button_DISABLED{
+    min-height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 2mm;
+    transition: 0.3s all linear;
+    background-color: var(--disabled_back);
+    width: 100%;
+    color: var(--border-black);
+    font-family: 'b3d';
+    font-size: 3vh;
+}
+.SettingPan_Dpan{
+    position: absolute;
+    max-height: 0%;
+    overflow: hidden;
+    width: 80%;
+    transition: 0.5s all linear;
+    background-color: var(--dark-back);
+    row-gap: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.SettingPan_MAIN:hover>.SettingPan_Dpan{
+    max-height: 100%;
+    z-index: 99;
+}.SettingPan_MAIN:hover>.SettingPan_MAIN_Button{
+    border-bottom-left-radius: 0mm;
+    border-bottom-right-radius: 0mm;
+}
+.SettingPan_Dpan input{
+    width: 100%;
+    min-height: 4vh;
+    overflow: hidden;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--Text);
+    font-family: 'b3d';
+    font-size: 3vh;
+    
+}
+.SettingPan_Dpan input:hover{
+    background-color: var(--lightBack) !important;
+}
+.Zaglush{
+    width: 100%;
+    min-height: 4vh;
+    text-align: center;
+    font-size: 3vh;
+    word-break:keep-all;
+    font-family: 'b3d';
+    color: var(--border-black);
+    background-color: var(--Text);
+}
+.topline{
+    width: 100%;
+    border-top: 1vh dashed var(--border-black);
+}
+
+
+.Exit_TopPanelSetting{
+    position:absolute;
+    height: 4vh;
+    width: 4vh;
+    text-align: center;
+    right: 0;
+    top: 0;
+}
+.exitButton:hover{
+    cursor: pointer;
+}
+.labelIntop{
+    width: 80%;
+    min-height: 5vh;
+    word-break:keep-all;
+    text-align: center;
+    font-size: 3vh;
+    font-family: 'b3d';
+    color: var(--Text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.helpButtons{
+    
+    transform-origin: 50% 100%;
+    transform:translateY(-2vw) translateX(-42.5vh) rotate(90deg) ;
+
+    height: 4vw;
+    width: 85vh;
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+.Buttonhelp{
+    text-decoration: none;
+    background: none;
+    color: var(--whited);
+    
+    border: none;
+    text-align: center;
+    
+    font-size: 3vh;
+    font-family: monospace;
+}
+
+
+
+
+
+
+
+
+
+.btn_zone_wp{
+    position: absolute;
+    background-color: none;
+    height: 7vh;
+    max-width: 50%;
+    bottom: -3vh;
+    right: 0;
+    opacity: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1vh;
+    gap: 1vh;
+    border-radius: 2mm;
+
+
+    animation: viewpan 2s forwards;
+    transition: 0.3s all linear;
+}
+
+@keyframes viewpan {
+    0% {
+        height: 0vh;
+        opacity: 0%;
+        bottom: 0vh;
+    }
+    100% {
+        height: 7vh;
+        opacity: 100%;
+        bottom: 3vh;
+    }
+}
+.imageButtomRow{
+    height: 90%;
+    background-color: var(--dark-back);
+    border-radius: 1mm;
+    transition: 0.2s all;
+}
+
+.imageButtomRow:hover{
+    height: 110%;
+    box-shadow: 0vh 0vh 3vh 0.5vh rgba(0, 79, 111, 0.3);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.MainTTX{
+    position: absolute;
+    left: 4vw;
+    
+    height: 92vh;
+    width: 94vw;
+
+    display: flex;
+
+}
+.ttxZone{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.imgZone{
+    height: 100%;
+    width: 50%;
+}
+
+
+
+
+
+
+.row{
+    
+    height: 12%;
+    width: 75%;
+    transform-origin: 50px 50px;
+    transform: rotate(-3deg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+}
+.rowLabel{
+    
+    height: 6%;
+    width: 75%;
+    transform-origin: 50px 50px;
+    transform: rotate(-3deg);
+}
+.ttx{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.row_small{
+    
+    background: linear-gradient(90deg, var(--lightBack) 0%, var(--lightBack) 55%, rgba(161, 5, 60, 0.8) 69%, rgba(75, 75, 75, 0) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+	font-family: "b3d";
+    font-size: 8vh;
+    color: var(--Text);
+    padding-right: 20%;
+}
+.ttxLabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    color: var(--blue);
+    font-family: monospace;
+    
+    font-size: 3vh;
+    
+    padding-right: 23%;
+}
+.nameTTX{
+    font-family: monospace;
+    color: var(--lightBack);
+    font-size: 3vh;
+    font-weight: 700;
+}
+.fullLabel{
+    color: var(--blue) !important;
+}
+
+
+
+
+.noRotateRow{
+    transform-origin: 50px 50px !important;
+    transform: rotate(0deg) !important;
+}
+.lowText{
+    font-size: 4vh !important;
+}
+
+
+
+
+.imgZone{
+    display: flex;
+    
+    align-items: center;
+    background: radial-gradient(circle, rgba(248, 8, 93, 0.5) 0%, rgba(248, 8, 93,0.36) 29%, rgba(248, 8, 93,0.15) 53%, rgba(33, 1, 93,0) 77%);
+}
+.imgArea{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+.skin{
+    width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.headButtonsZone {
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    right: 0;
+    top: 0;
+}
+
+.headPanelsAndBtn {
+    min-width: 15%;
+    height: 100%;
+    background: none;
+    border: 0vh solid rgba(0, 0, 0, 0);
+    transition: .2s all;
+    margin: 0vh 0vh;
+    
+    z-index: 5;
+}
+
+.headPanelsAndBtn:hover {
+    border-left-width: 1vh;
+    border-right-width: 1vh;
+}
+
+.headButtonIN {
+    width: 100%;
+    height: 7vh;
+    background: none;
+    border: none;
+    font-size: 3vh;
+    font-family: 'b3d';
+    color: var(--Text);
+}
+
+.DropPanel {
+    position: absolute;
+    width: 9.75vw;
+    min-height: 0%;
+    max-height: 0%;
+    background: var(--dark-back);
+    top: 100%;
+    transition: 1.3s all linear;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 0.0vh solid var(--lightBack);
+    z-index: 0;
+    overflow-y: clip;
+}
+
+.headPanelsAndBtn:hover>.DropPanel {
+    max-height: 100vh;
+    border: 0.1vh solid var(--lightBack);
+}
+
+.DropPanel .dp_zaglush {
+    width: 100%;
+    height: 5vh;
+    margin: 0.2vh 0;
+
+}
+
+.dp_button {
+    width: 100%;
+    min-height: 5vh;
+    overflow: hidden;
+    margin: 0.2vh 0;
+    border: none;
+    background: var(--back);
+    color: var(--Text);
+    font-family: 'b3d';
+    font-size: clamp(1vh, 100%, 2.5vh);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.dp_button:hover {
+    background-color: var(--lightBack);
+    color: var(--blue);
+}
+
+.dp_label {
+    width: 100%;
+    color: var(--Text);
+    font-family: 'b3d';
+    font-size: clamp(1vh, 100%, 2.5vh);
+    text-align: center;
+
+}
+
+.DropPanel_2UI{
+    position: absolute;
+    width: 0vw;
+    right: 100%;
+    background-color: var(--back);
+    top: 0%;
+    transition: 0.3s all linear;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 0.0vh solid var(--lightBack);
+}
+.PanelsAndBtn_In_dp:hover>.DropPanel_2UI{
+    border: 0.4vh solid var(--lightBack);
+    border-right: none;
+    width: 9.75vw;
+}
+
+
+
+
+
+
+
+
+
+.weaponArea {
+    min-height: 91%;
+    padding: 4% 18px 18px 18px;
+    width: calc(100% - 36px);
+    display: flex;
+    gap: 2vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    overflow: hidden;
+    transition: .3s all;
+
+}
+.helloArea{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+
+.SearchSettings{
+    
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    background-color: var(--back);
+    border-left: 0.5vh solid var(--border-black);
+}
+.TextSearchArea{
+    height: 45%;
+    padding: 3% 0%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.HelloImage{
+    height: 15vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+.HelloImage image{
+    max-height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+.TextSearcher{
+    height: calc(7vh - 0.2vw);
+    width: calc(28% - 0.2vw);
+    padding: 0% 1%;
+    border-radius: 2mm;
+    background-color: var(--Text);
+    border: 0.1vw solid var(--Text);
+    outline: none;
+    transition: .3s all;
+    overflow: hidden;
+}
+.TextSearcher:not(:placeholder-shown){
+    outline: none;
+    border-bottom-left-radius: 0mm;
+    border-bottom-right-radius: 0mm;
+}.TextSearcher:not(:focus){
+    border-bottom-left-radius: 2mm ;
+    border-bottom-right-radius: 2mm ;
+}
+.TextSearcher:not(:focus) ~ .SearchResuilts{
+    display: none;
+}
+.SearchResuilts:hover{
+    display: flex !important;
+}
+.SearchResuilts:focus{
+    display: flex !important;
+}
+.SearchResuilts{
+    background-color: var(--dark-back);
+    position: absolute;
+    top: 55%;
+    min-height: 0vh;
+    max-height: 25%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.SearchResuilts .inres{
+    background-color: var(--back);
+    height: 4vh;
+    min-height: 4vh;
+    width: 94%;
+    padding: 0% 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0.5% 0%;
+    color: var(--Text);
+    font-size: 3vh;
+    font-family: 'b3d';
+    transition: .2s all linear;
+    
+}
+.inres span{
+    position: absolute;
+    right: 0%;
+    height: 4vh;
+    background-color: var(--disabled_back);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--disabled_back) 23%, var(--disabled_back) 100%);
+    padding: 0% 3% 0% 7%;
+    transition: 0.2s all ease;
+    display: flex;
+    align-items: center;
+    z-index: 999933;
+    
+    
+}
+.inres:hover span{
+    opacity: 50%;
+    right: -100%;
+}
+.inres:hover{
+    background-color: var(--lightBack);
+    height: fit-content;
+    
+}
+.SearchResuilts .inres_bad{
+    background-color: var(--back);
+    min-height: 4vh;
+    width: 94%;
+    padding: 0% 3%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0.5% 0%;
+    color: var(--Text);
+    font-size: 2.7vh;
+    font-family: 'b3d';
+}
+.socialArea{
+    height: 10vh;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.socialLink{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.linkImg{
+    height: 100%;
+    border-radius: 5mm;
+}
+.UnknownName{
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    color: var(--Text);
+    font-size: 2vh;
+}
+
+
+
+
+
+.AvtorArea {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0vh 0vh;
+    transition: 0.3s all linear 0s;
+}
+
+.Labelix {
+    font-family: 'b3d';
+    font-size: 4vh;
+    text-align: center;
+    padding: 1vh;
+    width: calc(70% - 2vh);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--back) 25%, var(--lightBack) 50%, var(--back) 75%, rgba(255, 255, 255, 0) 100%);
+    color: var(--Text);
+    transition: .5s all;
+}
+
+.CardZones {
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 2vw 0;
+}
+
+
+
+
+.weaponCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .2s all;
+    border-radius: 5mm;
+    height: 25vh;
+    width: 40vh;
+    box-shadow: 0px 0px 17px 8px rgba(0, 79, 111, 0.0);
+    margin-bottom: 6vh;
+}
+
+.weaponCart:hover {
+    
+    background: rgba(237, 12, 35, 0.30);
+    box-shadow: 0px 0px 17px 8px rgba(237, 12, 35, 0.35)
+}
+
+.weaponCart:hover .imageOnCart {
+    cursor: pointer;
+    border-color: var(--lightBack);
+}
+
+.weaponCart:hover .textOnCart {
+    cursor: pointer;
+    border-color: var(--lightBack);
+    background-color: var(--lightBack);
+}
+
+
+
+.imageOnCart {
+    width: calc(100% - 1vh);
+    height: calc(80% - 0.5vh);
+    border: 0.5vh solid var(--dark-back);
+    border-bottom: none;
+    background-color: #79808536;
+    border-top-left-radius: 5mm;
+    border-top-right-radius: 5mm;
+    padding: -1px;
+    display: block;
+
+    transition: .45s all;
+}
+
+.textOnCart {
+    width: calc(100% - 1vh);
+    min-height: calc(20% - 0.5vh);
+    text-align: center;
+    color: var(--Text);
+    background-color: var(--back);
+    border: 0.5vh solid var(--dark-back);
+    border-top: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-stretch: semi-expanded;
+    font-size: 2.5vh;
+    border-bottom-left-radius: 5mm;
+    border-bottom-right-radius: 5mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    transition: .45s all;
+}
+
+
+
+
+
+.dopInfo{
+    overflow: hidden;
+    width: calc(100% - 10mm);
+    height: 0vh;
+    background-color: var(--back);
+    transition: .2s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    font-family: sans-serif;
+    font-weight: 600;
+    font-stretch: semi-expanded;
+    font-size: 2.5vh;
+    color: var(--Text);
+
+}
+
+.weaponCart_h:hover{
+
+    height: 31vh;
+    margin-bottom: 0vh;
+}
+.weaponCart_h:hover>.textOnCart{
+    border-radius: 0mm;
+}
+.weaponCart_h:hover>.dopInfo{
+    height: 6vh;
+    width: 100%;
+    border-bottom-left-radius: 5mm;
+    border-bottom-right-radius: 5mm;
+    background-color: var(--lightBack);
+}
+
+
+
+
+
+
+
+
+
+.SearchSettings{
+    
+    height: calc(100% - 1vh);
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    background-color: var(--back);
+    
+    transition: all 0.5s ease-out 0s;
+    border: 0.5vh solid var(--border-black);
+    border-right: none;
+    overflow: hidden;
+
+}
+.SearchSettings:hover{
+    border: 0.5vh solid var(--row);
+    border-right: none;
+    
+}
+.SearchColectionArea{
+    width: 100%;
+    display: flex;
+    background-color: var(--row);
+}
+.SearchColection{
+    width: 50%;
+    height: 7vh;
+    background-color: var(--row);
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-out 0s;
+}
+.AnimPan{
+    width: 0%;
+    border-top: 0.5vh solid var(--green);
+    transition: all 0.7s ease-out 0.5s;
+}
+.SearchColection > img{
+    max-height: 70%;
+}
+.SearchColection:hover{
+    background-color: var(--green);
+    
+}
+.SearchColection:hover > img{
+    filter: invert(100%);
+}
+.SearchColection:hover ~ .InfoPanel{
+    opacity: 0%;
+}
+
+.InfoPanel{
+    
+    height: calc(100% - 7vh);
+    border-top: 0.5vh solid var(--row);
+    border-bottom: 0.5vh solid var(--row);
+    opacity: 100%;
+    width: 100%;
+    transition: all 0.7s linear 0s;
+    color: var(--grayText);
+    font-family: 'b3d';
+    text-align: center;
+    font-size: 4vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.SearchColPanel{
+    height: 0%;
+    border-top: 0.5vh solid var(--green);
+    border-bottom: 0.5vh solid var(--green);
+    opacity: 0%;
+    width: 0%;
+    transition: all 0.5s linear 0s;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.col2pan{
+    transform-origin: center left;
+    transform: rotateY(180deg);
+    left: 100%;
+    position: relative;
+    
+}
+.col1:hover ~ .col1pan{
+    width: 100%;
+    height: calc(100% - 7vh);
+    opacity: 100%;
+}
+.col2:hover ~ .col2pan{
+    width: 100%;
+    height: calc(100% - 7vh);
+    opacity: 100%;
+}
+.col2pan *{
+    
+    transform:scaleX(-1);
+}
+
+.SearchColPanel:hover{
+    
+    height: calc(100% - 7vh);
+    opacity: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.StandartSeach {
+    
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--whited);
+    font-family: "b3d";
+}
+.bigSearch{
+    width: 40%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.search_in_standart{
+    width: 28vw;
+    max-width: 90%;
+    height: 8vh;
+    border:none;
+    outline: none !important;
+    appearance: none;
+    padding: 0px 5px 0px 5px;
+    border-bottom-left-radius: 11px;
+    border-top-left-radius: 11px;
+}
+.selectArrow_st{
+    background-color: var(--whited);
+    border: none;
+    height: 3vh;
+    padding: 2.5vh;
+    border-bottom-right-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.TimePanel{
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    width: 100%;
+    min-height: 7vh;
+    background-color: var(--back);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    border-top: 0.5vh solid var(--dark-back);
+}
+
+
+
+.TimeArea{
+    width: 50%;
+    display: flex;
+    
+    flex-direction: column;
+    margin-bottom: 4vh;
+}
+.t_row{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.t_row > label {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.35vh solid var(--border-black);
+    padding: 1.1vh;
+    font-size: 3vh;
+    font-family: 'b3d';
+    color: var(--Text);
+}
+.t_row:hover > label{
+    background-color: var(--dark-back);
+    cursor: pointer;
+}
+.green{
+    color: var(--blue) !important;
+}
+
+
+.TimeSettingsArea{
+    width: 90%;
+    min-width: 90vh;
+    height: 7vh;
+    padding: 2vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.SettingTime{
+    
+    font-size: 2vh;
+    width: 15%;
+    border: 0.5vh solid var(--grayText);
+    outline: none !important;
+    border-radius: 10px;
+    height: 4vh;
+    
+    padding-left: 1vw;
+
+    font-family: monospace;
+    font-weight: 700;
+}
+.TimeSettingsArea > input{
+    appearance: none;
+    outline: none !important;
+    
+}
+
+
+.WPSkinPanel{
+    position: absolute;
+    height: max-content;
+    min-width: max-content;
+    background-color: #b5003660;;
+    z-index: 33;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    bottom: 0vh;
+    right: 13vw;
+
+    overflow: hidden;
+
+    
+    animation: wpSkins 1s forwards;
+    transition: all 2s ease-in-out;
+    
+}
+
+
+@keyframes wpSkins {
+    0% {
+        max-height: 0vh;
+    }
+    100% {
+        border-top-left-radius: 5mm;
+        border-top-right-radius: 5mm;
+        max-height: 50vh;
+    }
+}
+
+
+.SkinListButton{
+    width: 100%;
+    height: 5vh;
+    font-size: 4vh;
+    font-family: 'b3d';
+    padding: 0vh 1vh;
+    margin: 0;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    border-top: 0.45vh solid var(--dark-back);
+    border-bottom: 0.45vh solid var(--dark-back);
+    background-color: #00293a60;
+    color: var(--Text);
+
+    user-select: none;
+    transition: 0.1s all ease-in-out;
+    text-align: center;
+}
+.SkinListButton:hover{
+    background-color: var(--lightBack);
+}

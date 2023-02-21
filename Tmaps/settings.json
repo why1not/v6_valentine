@@ -1,0 +1,10 @@
+{
+    "settings": [
+        {
+            "avtors": ["SkillOFF", "ARKANIS", "Novum Tempus", "Калининград", "IFaza"],
+            "teams": ["SkillOFF", "ARKANIS", "Novum Tempus"],
+            "player": ["Калининград", "IFaza"]
+        }
+    ]
+}
+

@@ -1,0 +1,166 @@
+{   
+    "maps": [
+        {
+            "number": "1",
+            "name": "Заправка",
+            "id": "334587",
+            "maker": "SkillOFF",
+            "folder": "SkillOFF",
+            "platform": "Вконтакте",
+            "img": ["a1","a2","a3","a4"]
+        },
+        {
+            "number": "2",
+            "name": "Моно 2",
+            "id": "337143",
+            "maker": "SkillOFF",
+            "folder": "SkillOFF",
+            "platform": "Вконтакте",
+            "img": ["b1","b2","b3","b4"]
+        },
+        {
+            "number": "3",
+            "name": "Двор",
+            "id": "337143",
+            "maker": "SkillOFF",
+            "folder": "SkillOFF",
+            "platform": "Вконтакте",
+            "img": ["c1","c2","c3","c4"]
+        },
+        {
+            "number": "4",
+            "name": "Переправа",
+            "id": "38310",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Steam",
+            "img": ["a1","a2","a3"]
+        },
+        {
+            "number": "5",
+            "name": "Дайр",
+            "id": "3919",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "MyGames",
+            "img": ["b1","b2","b3"]
+        },
+        {
+            "number": "6",
+            "name": "Милитех",
+            "id": "33777",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Steam",
+            "img": ["c1","c2","c3"]
+        },
+        {
+            "number": "7",
+            "name": "Нюк",
+            "id": "36025",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Steam",
+            "img": ["v1","v2","v3"]
+        },
+        {
+            "number": "8",
+            "name": "Бассейн",
+            "id": "339930",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Вконтакте",
+            "img": ["n1","n2","n3"]
+        },
+        {
+            "number": "9",
+            "name": "Меншен",
+            "id": "345113",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Вконтакте",
+            "img": ["m1","m2","m3"]
+        },
+        {
+            "number": "10",
+            "name": "Гамалия",
+            "id": "344434",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Вконтакте",
+            "img": ["s1","s2","s3"]
+        },
+        {
+            "number": "11",
+            "name": "Чертоги страха",
+            "id": "344700",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Вконтакте",
+            "img": ["d1","d2","d3"]
+        },
+        {
+            "number": "12",
+            "name": "Биг-Бен",
+            "id": "343754",
+            "maker": "ARKANIS",
+            "folder": "ARKANIS",
+            "platform": "Вконтакте",
+            "img": ["f1","f2","f3"]
+        },
+        {
+            "number": "13",
+            "name": "Modern",
+            "id": "295347",
+            "maker": "Novum Tempus",
+            "folder": "Novum Tempus",
+            "platform": "Вконтакте",
+            "img": ["a1","a2","a3"]
+        },
+        {
+            "number": "14",
+            "name": "Aqvium",
+            "id": "124151",
+            "maker": "Novum Tempus",
+            "folder": "Novum Tempus",
+            "platform": "Вконтакте",
+            "img": ["b1","b2","b3"]
+        },
+        {
+            "number": "15",
+            "name": "Fantasia",
+            "id": "317344",
+            "maker": "Novum Tempus",
+            "folder": "Novum Tempus",
+            "platform": "Вконтакте",
+            "img": ["c1","c2","c3"]
+        },
+        {
+            "number": "16",
+            "name": "Polychrome",
+            "id": "344411",
+            "maker": "Novum Tempus",
+            "folder": "Novum Tempus",
+            "platform": "Вконтакте",
+            "img": ["v1","v2","v3"]
+        },
+        {
+            "number": "17",
+            "name": "Городок",
+            "id": "312408",
+            "maker": "Калининград",
+            "folder": "Kaliningrad",
+            "platform": "Вконтакте",
+            "img": ["ne1","ne2","ne3"]
+        },
+        {
+            "number": "18",
+            "name": "Новогодний Миллениум",
+            "id": "348147",
+            "maker": "IFaza",
+            "folder": "IFaza",
+            "platform": "Вконтакте",
+            "img": ["a1","a2"]
+        }
+    ]
+}
