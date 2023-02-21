@@ -1,0 +1,61 @@
+
+function sotrByType(list) {
+    var oldText = list.options[list.selectedIndex].text;
+    list.options[list.selectedIndex].text = "Подождите..";
+    var cartZone = document.getElementById('weaponArea');
+    let headInZone = document.getElementById('inneredSeachHead');
+    var type = String(list.value);
+    cartZone.innerHTML = '';
+    let index = 0; // нулевое Количество оружия ( не скинов! )
+		while (index < col_weapon) {
+            if (isLoadedInList == false) {
+                let createOpt2 = document.createElement('option'); //Создаёться элемент списка
+			    createOpt2.value = index; //значение Value присваиваеться = номер оружия
+			    createOpt2.innerHTML = resulted[index].name; // в список вставляется название оружия
+
+                headInZone.insertBefore(createOpt2, headInZone.children[index]);
+            }
+            
+
+
+
+            if (resulted[index].type == type) {
+            
+                
+                let createCart =  document.createElement('div');
+                createCart.className += "weaponCart";
+                createCart.id = index;
+                createCart.setAttribute('onclick',"GetWeapon(this)");
+                cartZone.append(createCart);
+
+                let createImg = document.createElement('img');
+                createImg.src = "../screenshots/"+resulted[index].numder+".png";
+                createImg.className += "imageOnCart";
+                createCart.prepend(createImg);
+
+                let createName = document.createElement('label');
+                createName.className += "textOnCart";
+                createName.innerText = resulted[index].name;
+                createCart.append(createName);
+
+                
+
+                //<div class="weaponCart">
+                        //<img src="q109_1.png" class="imageOnCart">
+                        //<label class="textOnCart">Deagle</label>
+                    //</div>
+                    index = index + 1;
+            } 
+            else {
+                index = index + 1;
+            }
+			//Берём следующее оружее
+		}
+        isLoadedInList = true;
+        document.getElementById('helloArea').style.display = "none";
+        document.getElementById('weaponArea').style.display = "flex";
+        document.getElementById('StandartSeach').style.display = "none";
+
+        list.options[list.selectedIndex].text = oldText;
+
+}
