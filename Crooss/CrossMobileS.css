@@ -1,0 +1,86 @@
+
+:root {
+    --back: #7a042d !important;
+    --dark-back: #21010c !important;
+    --border-black: #080001 !important;
+    --row: #2E2F2E !important;
+    --lightBack: #a1053b !important;
+    /*--Text: #006E9A;*/
+    --Text: #e2f6fe !important;
+    --blue: #ed0c22 !important;
+    --whited: #e2f6fe !important;
+    --disabled_back: #00121a !important;
+
+    scroll-behavior: smooth;
+}
+ a{
+     
+    text-decoration: none;
+    color: var(--grayText);
+    transition: all 0.2s ease-out 0s;
+ }
+ li{
+    display: none;
+ }
+
+.snowflake {
+    position: fixed;
+    background-color: rgba(230, 14, 89, 0.764);
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+#snow {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0);
+    top: 0px;
+    left: 0px;
+}
+.crossPanelButton{
+    position: absolute;
+    height: 8vh;
+    width: 8vh;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #100C10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 65%;
+    left: calc(100% - 8vh);
+    transition: all 0.5s ease-out 0s;
+}
+.CrossButton{
+    height: 70%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+.crossPanelButton:hover{
+    
+    left: calc(100% - 12vh);
+    width: 12vh;
+}
+.crossPanelButton:hover .CrossButton{
+    background-color: #161716;
+    border-radius: 50px;
+}
+
+
+.crossImageButton{
+    height: 100%;
+    max-width: 200%;
+    
+}
+
+.FloatPanel{
+    display: none;
+}

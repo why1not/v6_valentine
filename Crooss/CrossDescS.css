@@ -1,0 +1,211 @@
+
+:root {
+    --back: #7a042d !important;
+    --dark-back: #21010c !important;
+    --border-black: #080001 !important;
+    --row: #2E2F2E !important;
+    --lightBack: #a1053b !important;
+    /*--Text: #006E9A;*/
+    --Text: #e2f6fe !important;
+    --blue: #ed0c22 !important;
+    --whited: #e2f6fe !important;
+    --disabled_back: #00121a !important;
+
+    scroll-behavior: smooth;
+}
+
+
+ a{
+     
+    text-decoration: none;
+    color: var(--Text);
+    transition: all 0.2s ease-out 0s;
+ }
+ li{
+    list-style: none;
+    font-family: 'b3d';
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 4vh;
+    margin: 2%;
+    user-select: none;
+    transition: all 0.2s ease-out 0s;
+    padding-left: 2vw;
+    width: 100%;
+    height: calc(4vh + 2%);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: var(--border-black);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+ }
+
+.snowflake {
+    position: fixed;
+    background-color: rgba(230, 14, 89, 0.764);
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+#snow {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0);
+    top: 0px;
+    left: 0px;
+}
+.crossPanelButton{
+    z-index: 50;
+    position: fixed;
+    height: 8vh;
+    width: 8vh;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #000c0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 65%;
+    left: calc(100% - 8vh);
+    transition: all 0.5s ease-out 0s;
+}
+.CrossButton{
+    height: 70%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+.crossPanelButton:hover{
+    
+    left: calc(100% - 12vh);
+    width: 12vh;
+    cursor: pointer;
+}
+.crossPanelButton:hover .CrossButton{
+    background-color: var(--back);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.crossImageButton{
+    height: 100%;
+    max-width: 200%;
+    
+}
+
+.FloatPanel{
+    
+    z-index: 50;
+    height: 100%;
+    width: 0.1vh;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    transition: all 0.7s cubic-bezier(0.39, 0.9, 0.86, 1) 1s;
+}
+.floatTop{
+    height: 0%;
+    width: 100%;
+    background-color: var(--lightBack);
+    border-right: 1vh solid var(--blue);
+    transition: all 0.7s ease-out 0.1s;
+    overflow: hidden;
+    opacity: 0%;
+    border-bottom: 1vh solid var(--blue);
+    border-bottom-right-radius: 30px;
+}
+.floatBottom{
+    height: 0%;
+    width: 100%;
+    background-color: var(--lightBack);
+    border-right: 1vh solid var(--blue);
+    opacity: 0%;
+    border-top: 1vh solid var(--blue);
+    
+    transition: all 0.7s ease-out 0.1s;
+    border-top-right-radius: 30px;
+    
+    overflow: hidden;
+}
+
+.FloatPanel:hover{
+    width: 20%;
+}
+.FloatPanel:hover .floatTop{
+    height: 50%;
+    border-color: var(--blue);
+    border-bottom-right-radius: 0px;
+    opacity: 100%;
+    border-bottom-width: 0.1vh;
+}
+.FloatPanel:hover .floatBottom{
+    height: 50%;
+    border-color: var(--blue);
+    border-top-right-radius: 0px;
+    opacity: 100%;
+    border-top-width: 0.1vh;
+}
+.floatUpText{
+    
+    font-size: 5vh;
+    font-family: 'b3d';
+    color: var(--Text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+}
+ul{
+    height: calc(100% - 7vh);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    overflow: hidden;
+    
+
+}
+li:hover {
+    font-size: 4.5vh;
+    background-color: var(--blue);
+    border-bottom-left-radius: 11px;
+    border-top-left-radius: 11px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+li:hover a{
+    color: var(--Text);
+}
+.row_small{
+    background: linear-gradient(90deg, var(--lightBack) 0%, var(--lightBack) 55%, rgba(161, 5, 60, 0.8) 69%, rgba(75, 75, 75, 0) 100%) !important;
+}
+.textOnCart{
+    background-color: var(--lightBack) !important;
+}
+
+.weaponCart:hover {
+    
+    background: rgba(237, 12, 35, 0.30) !important;
+    box-shadow: 0px 0px 17px 8px rgba(237, 12, 35, 0.35) !important;
+}
+
+.dp_button:hover {
+    background-color: var(--lightBack) !important;
+    color: var(--Text) !important;
+}

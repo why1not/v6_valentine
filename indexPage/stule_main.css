@@ -1,0 +1,176 @@
+@charset "UTF-8";
+:root{
+    --back: #161716;
+    --border-black: #0e0c0a;
+    --row: #2E2F2E;
+    --grayText: #adaead;
+    --green: #d3ff3f;
+    scroll-behavior: smooth;
+}
+.invisible{
+    visibility: hidden;
+}
+@font-face {
+	font-family: 'b3d'; 
+	src: url("../assets/b3d.ttf"); 
+}
+.allContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    min-width: 100%;
+    height: 100%;
+}
+.header{
+    width: 100%;
+    height: 7vh;
+    
+    background-color: var(--back);
+    border-bottom: 0.5vh solid var(--border-black);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer{
+    width: 100%;
+    height: 7vh;
+
+    background-color: var(--back);
+    border-top: 0.5vh solid var(--border-black);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.all{
+    height: 86vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: var(--border-black);
+}
+
+
+
+
+
+
+
+
+
+.logoZone{
+    height: 100%;
+    min-width: 30%;
+    
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+
+    
+}
+.logo{
+    height: 90%;
+}
+.imageLogo{
+    height: 100%;
+}
+.logoText{
+    color: white;
+    font-size: 5vh;
+    font-family: 'b3d';
+    
+	letter-spacing: 1.8px;
+    margin-left: 1vw;
+}
+
+
+
+
+
+
+.dopInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-family: "b3d";
+    font-size: 4vh;
+}
+
+
+
+
+
+
+.helloText{
+    font-size: 5vh;
+}
+.ButtonArea{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+}
+.ButtonHref{
+    width: 8vw;
+    height: 8vw;
+    background: var(--back);
+    margin: 1vw ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5vh solid var(--grayText);
+    border-radius: 10px;
+    text-decoration: none;
+    appearance: none;
+}
+.imgOnButton{
+    height: 65%;
+}
+
+
+
+
+
+.StandartSeach {
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: "b3d";
+}
+.SocialLink{
+    background: var(--row);
+    font-family: monospace;
+    font-size: 2.2vh;
+    width: 25%;
+    text-align: center;
+    border: 0.25vh solid var(--border-black);
+    color: var(--grayText);
+    border-radius: 10px;
+}
