@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+        <!--<link href="./weaponPage/stule_mobile.css"  rel="stylesheet" type="text/css" >-->
+        <link href="./Crooss/CrossMobileS.css" id="CrossAdapt" rel="stylesheet" type="text/css" >
+        <link href="./skinpage/stule_mobile.css" id="abaptive" rel="stylesheet" type="text/css" >
+
+        
+        
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./assets/favico/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/favico/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/favico/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/favico/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./assets/favico/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./assets/favico/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./assets/favico/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./assets/favico/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="./assets/favico/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="./assets/favico/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="./assets/favico/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="./assets/favico/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="./assets/favico/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="./assets/favico/mstile-310x310.png" />
+
+        
+	    <title>Справочник Блокады</title>
+    </head>
+    <body>
+        <div class="allContent">
+            <div class="header">
+                <div class="logoZone">
+                    <a href="https://vk.cc/chBPOq" class="logo" >
+                        <img src="./assets/av3.png" class="imageLogo">
+                    </a>
+                    <a onclick="back()">
+                    <label class="logoText" id="logo">Справочник > скины</label>
+                    </a>
+                </div>
+                <div class="headButtonsZone">
+                    <!--<div class="headPanelsAndBtn" id="headPanelsAndBtn_1"><input type="button" class="headButtonIN" value="Бафы"><div class="DropPanel" id="Teams">
+                        
+                        <input type="button" class="dp_button" name="C " value="Без бафов" onclick="sort_type(this)">
+                        <input type="button" class="dp_button" name="Автомат" value="" onclick="sort_type(this)">
+                        <input type="button" class="dp_button" name="ПП" value="Пистолет-&#10;пулемёты " onclick="sort_type(this)">
+                        <input type="button" class="dp_button" name="Дробовик" value="Дробовики" onclick="sort_type(this)">
+                        <input type="button" class="dp_button" name="Пулемёт" value="Пулемёты" onclick="sort_type(this)">
+                        <input type="button" class="dp_button" name="Холодное" value="Холодные" onclick="sort_type(this)">
+                        <input type="button" class="dp_button" name="Пистолет" value="Пистолеты" onclick="sort_type(this)">
+                        <input type="button" class="dp_button" name="Разное" value="Разное" onclick="sort_type(this)">
+                    </div></div>-->
+
+                    <!--<div class="headPanelsAndBtn" id="headPanelsAndBtn_2"><input type="button" class="headButtonIN" value="Бафы" onclick="opentoppanel()">
+                    </div>-->
+
+                    <div class="headPanelsAndBtn" id="headPanelsAndBtn_2"><input type="button" class="headButtonIN" id="Всё" value="Все скины" onclick="GetIventWP(this)">
+                    </div>
+
+                    <div class="headPanelsAndBtn" id="headPanelsAndBtn_3"><input type="button" class="headButtonIN" value="Ивенты"><div class="DropPanel">
+                        <!--Контент в панельке кнопок голова-->
+                        <!--СПИСКИ-->
+                        <div class="PanelsAndBtn_In_dp">
+                            <input type="button" class="dp_button dp_2UI_B" value="Сезоны">
+                            <div class="DropPanel_2UI">
+                            
+                                <input type="button" class="dp_button" id="Вторжение корпорации" value="Вторжение&#10;корпорации&#10;2019-2020" onclick="GetIventWP(this)">
+                                <input type="button" class="dp_button" id="Стимпанк" value="СТИМПАНК&#10;2020" onclick="GetIventWP(this)">
+                                <input type="button" class="dp_button" id="Буря в пустыне" value="Буря в&#10;пустыне 2022" onclick="GetIventWP(this)">
+                            </div>
+                        </div>
+
+                        <input type="button" class="dp_button" id="Новый год" value="Новый год" onclick="GetIventWP(this)">
+                        <input type="button" class="dp_button" id="Хэллоуин" value="Хэллоуин" onclick="GetIventWP(this)">
+                        <!--<input type="button" class="dp_button" id="militari" value="Милитари 1945" onclick="GetIventWP(this)">-->
+                        <input type="button" class="dp_button" id="Обычный" value="Стандартные&#10;скины" onclick="GetIventWP(this)">
+                        
+
+                    </div></div>
+
+                    
+                    
+                    <!--<div class="headPanelsAndBtn" id="headPanelsAndBtn_4"><input type="button" class="headButtonIN" value="Настройки"><div class="DropPanel">-->
+                        <!--Контент в панельке кнопок голова-->
+                        <!--НАСТРОЙКИ-->
+                        
+                        <!--<label class="dp_label">Размер карточек</label>-->
+                        <!--<input type="range" class="dp_range" value="1" min="0.5" max="3" step="0.5" oninput="remsize(this)">-->
+                    
+                    
+                    <!--</div></div>-->
+                    <!--<div class="headPanelsAndBtn"><input type="button" class="headButtonIN" value="" onclick=""><div class="DropPanel!">
+                        Контент в панельке кнопок голова
+                    
+                    
+                    
+                    </div></div>-->
+
+
+
+
+
+
+                    
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="all" id="viewList">
+                
+                <!-- Приветсвенная панелька-->
+                <div class="helloArea" id="helloArea">
+                    <div class="TextSearchArea">
+                        <div class="HelloImage">
+                            <img src="./assets/big-logo.png" alt="Блокада Справочник">
+                        </div>
+                        <input type="text" class="TextSearcher" placeholder="Название скина..." oninput="search(this)">
+                        <div class="SearchResuilts" id="SearchResuilts">
+                            <!--<label class="inres">fff1<span>ккк</span></label>-->
+                        </div>
+                        <!--<input type="button" value="Не помню название.." class="UnknownName">-->
+                    </div>
+                    
+
+
+                    
+                    <div class="socialArea">
+                        <a href="https://vk.com/fao_blockade" class="socialLink"><img src="./assets/vk.png" class="linkImg" alt="Группа в Вконтакте"></a>
+                        <!--<a href="https://vk.cc/ci2QzI" class="socialLink"><img src="./assets/gs.png" class="linkImg" alt="Оригинальный справочник"></a>-->
+                    </div>
+                </div><!-- Конец приветственной панельки-->
+
+
+                <!-- Панелька с поиском по ТИПУ-->
+                <div class="weaponArea" id="typeArea" style="display: none;">
+                    <!-- карточка -->
+                    <div class="AvtorArea">
+                        <div class="Labelix" id="SortNameTypeText">SkillOFF</div>
+                        <div class="CardZones" id="ST_Zone"> 
+                            <!--
+                            <div class="weaponCart">
+                                <img src="./assets/no.png" class="imageOnCart">
+                                <label class="textOnCart">Deagle</label>
+                                <div class="dopInfo">
+                                    erererer
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                    
+                </div><!--КОНЕЦ ПАНЕЛЬКИ ПОИСКА ПО ТИПУ-->
+                
+                
+                <!-- Панелька с поиском по ивенту-->
+                <div class="weaponArea" id="iventArea" style="display: none;">
+                    <!-- карточка -->
+                    <div class="AvtorArea">
+                        <div class="CardZones" id="IV_Zone"> 
+                            <!--
+                            <div class="weaponCart">
+                                <img src="./assets/no.png" class="imageOnCart">
+                                <label class="textOnCart">Deagle</label>
+                                <div class="dopInfo">
+                                    erererer
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="weaponArea" id="topArea" style="display: none;">
+                    <!-- карточка -->
+                    <div class="AvtorArea">
+                        <div class="Labelix" id="TopTypeText">SkillOFF</div>
+                        <div class="CardZones" id="TOP_Zone"> 
+                            <!--
+                            <div class="weaponCart weaponCart_h">
+                                <img src="./assets/no.png" class="imageOnCart">
+                                <label class="textOnCart">Deagle</label>
+                                <div class="dopInfo">
+                                    erererer
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
+                <!-- Панелька со стандартным поиском-->
+                <div class="StandartSeach" id="StandartSeach" style="display: none;">
+                    <label style="font-size: 4vh;">Выбери оружее из списка</label>
+                    <div class="bigSearch">
+                    
+                        
+                        <select class="search_in_standart" onchange="GetWeapon(this)">
+                            <option selected disabled>Оружее не выбрано</option>
+                            <optgroup id="inneredSeach" label="Доступные оружия:">Стандартный cписок</optgroup>
+                        </select>
+                        <img src="./assets/arrow.png" class="selectArrow_st">
+                    </div>
+                </div><!-- Конец стандартной панельки поиска-->
+
+
+
+                <!-- Настройки поиска-->
+                <!--
+                    fffffffffffffffffffffffffffffff
+                -->
+                <!--
+                <div class="SearchSettings">
+                    <div class="SearchColection col1">
+                        <img src="./assets/filter.png" alt="Фильтры">
+                    </div>
+                    <div class="SearchColection col2">
+                        <img src="./assets/spis.png" alt="Список">
+                    </div>
+                    <div class="SearchColPanel col1pan">
+                        <label class="settingsLabel">Поиск по типу</label>
+                        <select class="Setting" id="sortList" onchange="sotrByType(this)">
+                        
+                            <optgroup label="Не работает c" disabled></optgroup>
+                            <optgroup label="топами оружия" disabled></optgroup>
+                            <option disabled> </option>
+                            <optgroup label="Тип:">
+                                <option value="Холодное">Холодное</option> 
+                                <option value="ПП">Пистолет-пулемёты</option> 
+                                <option value="Автомат">Автоматы</option> 
+                                <option value="Пулемёт">Пулемёты</option> 
+                                <option value="Винтовка">Снайперки</option>
+                                <option value="Дробовик">Дробовики</option> 
+                                <option value="Пистолет">Пистолеты</option> 
+                                <option value="Разное">Разное</option>
+                            </optgroup>
+                                
+                        </select>
+                        <label class="settingsLabel">Топы</label>
+                        <input class="Setting" type="submit" onclick="openTopPanel(this)" value="Открыть настройки">
+                        
+                    </div>
+                    <div class="SearchColPanel col2pan">
+                        <label class="settingsLabel">Другое.</label>
+                        <input class="Setting" type="submit" onclick="standartSeach(this)" value="Стандартный список">
+
+                    </div>
+                    
+                    <div class="InfoPanel">
+                        
+                        <label><br>Выбери каким способом будешь искать оружее</label>
+                    </div>
+            </div>
+            -->
+                <!-- Конец панельки настроек поиска-->
+
+
+
+
+                </div>
+            
+                <!--Панелька топов-->
+                <div class="TopPanelSetting" id="TopPanelSettings" style="display: none;">
+                    <div class="Exit_TopPanelSetting">
+                        <img src="./assets/exit.png" class="logo exitButton" onclick="extiTopPanel()">
+                    </div>
+                    <label class="labelIntop" style="margin-top: 5%; font-size: 5vh;">Бафы скинов</label>
+                    <div class="SettingPan_MAIN">
+                        <input type="button" id="TOP_StandartTopButton" value="Выбрать бафы" class="SettingPan_MAIN_Button">
+                        <div class="SettingPan_Dpan">
+                            <input type="button" onclick="OpenTheTop(this)" id="top_damage" name="toplist_1" value="Без бафов">
+                            <input type="button" onclick="OpenTheTop(this)" id="top_f_damage" name="toplist_1" value="Защита от урона">
+                            <input type="button" onclick="OpenTheTop(this)" id="top_clip" name="toplist_1" value="Бонус к оружию">
+                            <input type="button" onclick="OpenTheTop(this)" id="top_f_clip" name="toplist_1" value="Защита + доп. урон">
+                            <input type="button" onclick="OpenTheTop(this)" id="top_f_clip" name="toplist_1" value="Другое..">
+                        </div>
+                    </div>
+                
+                    <!--<div class="SettingPan_MAIN">
+                        <input type="button" id="TOP_unStandartTopButton" value="Расширенные топы" class="SettingPan_MAIN_Button">
+                        <div class="SettingPan_Dpan">
+                            <div class="Zaglush">Топы по времени убийства</div>
+                            <input type="button" onclick="OpenTheTop(this)" id="top100st" name="toplist_2" value="100хп [ Без брони ],&#10;Сток прокачка">
+                            <input type="button" onclick="OpenTheTop(this)" id="top100fl" name="toplist_2" value="100хп [ Без брони ],&#10;Фулл прокачка">
+                            <input type="button" onclick="OpenTheTop(this)" id="top150st" name="toplist_2" value="100хп [ Укреп. броня ] ,&#10;Сток прокачка">
+                            <input type="button" onclick="OpenTheTop(this)" id="top150fl" name="toplist_2" value="100хп [ Укреп. броня ],&#10;Фулл прокачка">
+                        </div>
+                    </div>-->
+                    <div class="topline"></div>
+                    <label class="labelIntop">Добавить сортировку по ивенту</label>
+                    <div class="SettingPan_MAIN_DISABLED" id="WPTYPEOFF">
+                        <input type="button" id="TOP_wpTypeButton" value="Выбрать тип" class="SettingPan_MAIN_Button_DISABLED">
+                        <div class="SettingPan_Dpan">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Отключено" value="Отключено" style="background-color: var(--disabled_back);">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Винтовка" value="Винтовки">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Автомат" value="Автоматы">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="ПП" value="Пистолет-&#10;пулемёты ">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Дробовик" value="Дробовики">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Пулемёт" value="Пулемёты">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Холодное" value="Холодные">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Пистолет" value="Пистолеты">
+                            <input type="button" onclick="OpenTheTop(this)" name="topWPtype" id="Разное" value="Разное">
+                
+                
+                
+                
+                
+                
+                
+                        </div>
+                    </div>
+                    <!--
+                    <div class="topline"></div>
+                    <div class="SettingDiv">
+                        <input type="button" value="Посмотреть результат" class="SettingPan_MAIN_Button">
+                    </div>
+                    -->
+                
+                </div>
+            
+            
+            
+            
+            
+
+
+
+
+            
+            
+            <!--Просмотр ОРУЖИЯ!-->
+            <div class="all2" id="viewWeapon"  style="display: none;">
+                <div class="helpButtons">
+                    <!--<input type="submit" style="border-top: 0.5vh solid white;" class="Buttonhelp" value="Общее" onclick="openMainTTX()" id="mainTTX_button">-->
+                    <input type="submit" class="Buttonhelp" value="Подробно" id="otherTTX_button">
+                </div>
+
+                <div class="MainTTX">
+                    
+                    
+                    
+                
+                    
+                    <!--ТТХ-->
+                    
+                    <div class="ttxZone" >
+                        
+                        
+                        <!--Общие ТТХ-->
+                        <div class="ttx" id="mainTTX" >
+                            <div class="rowLabel">
+
+                                <!--<div class="ttxLabel">
+                                    <label>Ттх скина</label>
+                                    
+                                </div>-->
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Название</label>
+                                <div class="row_small">
+                                    
+                                    <label class="fullLabel kk1f" id="damage_f">---</label>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Цена</label>
+                                <div class="row_small">
+                                    <label class="fullLabel kk1f" id="clip_f">---</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Серия</label>
+                                <div class="row_small">
+                                    <label class="fullLabel kk1f" id="box_f">456</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Тип</label>
+                                <div class="row_small">
+                                    <label class="kk1f" id="temp">123</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Защитные свойства</label>
+                                <div class="row_small">
+                                    <label class="kk1f lllk1" id="range">123</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            
+                                <label class="nameTTX">Доп. Cвойства</label>
+                                <div class="row_small">
+                                    <label class="kk1f lllk1" id="reload">123</label>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+
+
+
+
+
+
+                        <!--Подробные ТТХ-->
+                        
+
+
+                    </div>
+
+
+
+
+
+                    
+
+
+
+                    <!--Картинка оружия-->
+                    <div class="imgZone">
+                        <div class="imgArea">
+                            <img src="./assets/no.png" alt="" id="skin" class="skin">
+                        </div>
+                    </div>
+                    <!--
+                    <div class="btn_zone_wp">
+                        <input type="image" class="imageButtomRow" src="./assets/change_skin.png" onclick="Open_CloseSkins()">
+                        <input type="image" class="imageButtomRow" src="./assets/time.png" id="TimeButton" onclick="calcTime(this)">
+                    </div>-->
+                </div>
+            </div> <!--конец !! Просмотр ОРУЖИЯ!-->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--
+            <div class="footer">
+                <input type="submit" class="selectButtonFooter" id="TimeButton" value="Расчитать время" onclick="calcTime(this)" style="display: none;">
+                <input type="submit" class="selectButtonFooter" id="skinArea" style="display: none;" value="Изменить скин" onclick="skinList()">
+
+                    <div id="skinAreaList" style="display: none;">
+                        
+                        <select class="SkinSelect" onchange="ChangeSkin(this)">
+                            <option disabled selected>Не выбрано</option>
+                            <optgroup id="innerSkin" label="Доступные скины">
+                                
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>-->
+                
+                
+                
+                
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Панель плавующая с временем убийства-->
+
+        <div class="TimePanel" id="TimePanel" style="display: none;">
+            <div class="TimeSettingsArea">
+                <input type="number" min="0" max="99" placeholder="% Доп.Урона" class="SettingTime"id="upDm" oninput="calcTime()">
+                <input type="number" min="0" max="99" placeholder="% Защиты" class="SettingTime" id="res" oninput="calcTime()">
+
+                <select id="armHead" class="SettingTime" onchange="calcTime()">
+                    <option disabled>Каска</option>
+                    <option value="0">Нет</option>
+                    <option value="1">Стандарт</option>
+                    <option value="2" selected>Укреплённая</option>
+                </select>
+                <select id="armBody" class="SettingTime" onchange="calcTime()">
+                    <option disabled>Броня</option>
+                    <option value="0">Нет</option>
+                    <option value="1">Стандарт</option>
+                    <option value="2" selected>Укреплённая</option>
+                </select>
+                <select id="pump" class="SettingTime" onchange="calcTime()">
+                    <option disabled>Тип прокачки</option>
+					<option value="stok" >Сток</option>
+					<option value="full" selected>Фулл</option>
+                </select>
+            </div>
+            
+            <div class="TimeArea">
+                <div class="t_row">
+                    <label style="color: var(--blue);">Часть тела</label>
+                    <label style="color: var(--blue)">Кол. выстр.</label>
+                    <label style="color: var(--blue)">Время (мс)</label>
+                </div>
+                
+                <div class="t_row">
+                    <label class="green">Голова</label>
+                    <label id="headNUM">--</label>
+                    <label id="headTIME">--</label>
+                </div>
+                
+                <div class="t_row">
+                    <label class="green">Тело</label>
+                    <label id="bodyNUM">--</label>
+                    <label id="bodyTIME">--</label>
+                </div>
+                <div class="t_row">
+                    <label class="green">Плечо</label>
+                    <label id="UpstikNUM">--</label>
+                    <label id="UpstikTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Пред-<br>плечье</label>
+                    <label id="stikNUM">--</label>
+                    <label id="stikTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Кисть</label>
+                    <label id="DownstikNUM">--</label>
+                    <label id="DownstikTIME">--</label>
+                </div>
+                
+                <div class="t_row">
+                    <label class="green">Бедро</label>
+                    <label id="bedroNUM">--</label>
+                    <label id="bedroTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Голень</label>
+                    <label id="golenNUM">--</label>
+                    <label id="golenTIME">--</label>
+                </div>
+
+                <div class="t_row">
+                    <label class="green">Ступня</label>
+                    <label id="nogiNUM">--</label>
+                    <label id="nogiTIME">--</label>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="WPSkinPanel" id="WPSkinPanel" style="display: none;">
+            <label class="SkinListButton" style="color: var(--blue); text-align: center;">Доступные скины</label>
+            <!--<input type="button" class="SkinListButton">-->
+        </div>
+
+
+
+
+
+
+
+
+
+        <div style="display: block;">
+            <input class="SkinListButton" id="StandertModel" type= "button" skintype="standartSkin" value="Стандартный скин" onclick="ChangeSkin(this)">";
+            <input class="SkinListButton" type="button" name="qq70_1" skintype="moreSkin" wpnumber="_loadNum" value="АК-47 Буря в пустыне" onclick="ChangeSkin(this)">
+        </div>
+
+
+        <div class="crossPanelButton">
+            <button class="CrossButton" onclick="SnowOnOff()">
+                <img src="./assets/snow.png" class="crossImageButton" id="ImG1gA">
+            </button>
+        </div>
+
+        <div id="snowflakeContainer">
+            <span class="snowflake" id="ImG1gA"></span>
+        </div>
+
+
+        <!-- панелька кросс-боковая -->
+        <div class="FloatPanel">
+            <div class="floatTop">
+                <div class="floatUpText">
+                    Справочник
+                </div>
+                <ul>
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="./skin.html">Скины</a></li>
+                    <li><a href="./weapon.html">Оружия</a></li>
+                    <li><a href="./maps.html">Карты</a></li>
+                    <li><a style="text-decoration: line-through;">Техника</a></li>
+                </ul>
+            </div>
+            <div class="floatBottom">
+                <div class="floatUpText">
+                    Информация
+                </div>
+                <ul>
+                    <li><a href="https://vk.com/fao_blockade">Группа вк</a></li>
+                    <li><a href="https://vk.me/join/3hJX5ImFBybTkTNLUc5E4VR2mspma9FVJhY=">Беседа вк</a></li>
+                    <li><a href="https://vk.cc/ci2QzI">Оригинал</a></li>
+                    <li><a href="https://vk.cc/ck4izL">Доб. Карту</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Скрипты-->
+        <script type="text/javascript" src="./skinPage/adaptive.js"></script>
+        <script type="text/javascript" src="./skinPage/skins.js"></script>
+        <script type="text/javascript" src="./Crooss/bone.js" id="boneJs"></script>
+
+        
+        
+        
+        
+    </body>
+</html>
